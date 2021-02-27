@@ -19,7 +19,7 @@ app.use(express.static("public"));
 console.log(process.env.MONGO_URI)
 
 mongoose.connect(
-  process.env.MONGO_URI, {
+  "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true,
