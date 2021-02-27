@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -15,7 +16,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-
+console.log(process.env.MONGO_URI)
 
 mongoose.connect(
   process.env.MONGO_URI, {
