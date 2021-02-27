@@ -18,8 +18,10 @@ app.use(express.static("public"));
 
 console.log(process.env.MONGO_URI)
 
+const configDB="mongodb://localhost/budget";
+
 mongoose.connect(
-  "mongodb://localhost/budget", {
+  process.env.MONGODB_URI || configDB, {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true,
