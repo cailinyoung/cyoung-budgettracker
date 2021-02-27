@@ -35,3 +35,6 @@ app.use(require("./routes/api.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+
+// sudo mongod --dbpath /System/Volumes/Data/data/db
